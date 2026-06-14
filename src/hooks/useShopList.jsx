@@ -6,7 +6,12 @@ export default function useShopList() {
   function addShopTodo(text, quantity = 1) {
     setShopList((prev) => [
       ...prev,
-      { id: crypto.randomUUID(), text, completed: false, quantity },
+      {
+        id: crypto.randomUUID(),
+        text,
+        completed: false,
+        quantity: Number(quantity),
+      },
     ]);
   }
 
