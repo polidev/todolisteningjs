@@ -3,10 +3,10 @@ import useLocalStorage from "./useLocalStorage.jsx";
 export default function useShopList() {
   const [shopList, setShopList] = useLocalStorage("shopList", []);
 
-  function addShopTodo(text) {
+  function addShopTodo(text, quantity = 1) {
     setShopList((prev) => [
       ...prev,
-      { id: crypto.randomUUID(), text, completed: false, quantity: 1 },
+      { id: crypto.randomUUID(), text, completed: false, quantity },
     ]);
   }
 
