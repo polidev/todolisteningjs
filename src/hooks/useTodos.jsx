@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import useLocalStorage from "./useLocalStorage";
+import useLocalStorage from "./useLocalStorage.jsx";
 
 /**
  * Custom hook encapsulating all todo-list CRUD operations.

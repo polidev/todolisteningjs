@@ -22,6 +22,7 @@ export default function TodoInput({ addTodo }) {
         type="text"
         placeholder="What needs to be done?"
         onKeyDown={handleKeyDown}
+        required
       />
       <button type="submit">+ Add</button>
     </form>

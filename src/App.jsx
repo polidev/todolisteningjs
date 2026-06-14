@@ -4,6 +4,9 @@ import { Routes, Route } from "react-router";
 const TodoPage = lazy(() => import("./pages/todoPage.jsx"));
 const ShoppingPage = lazy(() => import("./pages/shoppingPage.jsx"));
 const ErrorPage = lazy(() => import("./pages/errorPage.jsx"));
+const MusicPlayer = lazy(
+  () => import("./components/musicPlayer/musicPlayer.jsx"),
+);
 
 function App() {
   return (
@@ -14,6 +17,7 @@ function App() {
           <Route path="/shopping" element={<ShoppingPage />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
+        {/* <MusicPlayer /> */}
       </Suspense>
     </>
   );
