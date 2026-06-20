@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@layer components {
+  .error-page {
+    @apply flex flex-col items-center justify-center min-h-screen gap-4 text-center px-4;
+  }
+
+  .error-page h1 {
+    @apply text-6xl font-bold text-gray-800;
+  }
+
+  .error-page p {
+    @apply text-lg text-gray-500 max-w-md;
+  }
+
+  .error-page a {
+    @apply mt-4 inline-block px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition;
+  }
+}
