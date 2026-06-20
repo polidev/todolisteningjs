@@ -15,14 +15,25 @@ function App() {
     <>
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          <Route path="/" element={<Layout children={<TodoPage />} />} />
+          <Route
+            path="/"
+            element={
+              <Layout
+                children={
+                  <>
+                    <TodoPage />
+                    <MusicPlayer />
+                  </>
+                }
+              />
+            }
+          />
           <Route
             path="/shopping"
             element={<Layout children={<ShoppingPage />} />}
           />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
-        {/* <MusicPlayer /> */}
       </Suspense>
     </>
   );

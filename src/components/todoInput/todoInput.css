@@ -2,7 +2,7 @@
 
 @layer components {
   #todo-form {
-    @apply w-full flex flex-col items-center gap-4 p-4 bg-white rounded-lg shadow-md;
+    @apply w-full mb-2 flex flex-col items-center gap-4 p-4 bg-white rounded-lg shadow-md;
     @apply md:max-w-md;
     @apply lg:max-w-lg;
 
