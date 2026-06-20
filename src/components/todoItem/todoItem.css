@@ -2,8 +2,18 @@
 
 @layer components {
   .todo-item {
+    @apply flex flex-row items-center p-4 gap-4 bg-white rounded shadow mb-2;
+
+    & input[type="checkbox"] {
+      @apply size-4 cursor-pointer;
+    }
+
     & input:checked ~ label {
       @apply line-through text-gray-400;
+    }
+
+    & button {
+      @apply ml-auto hover:text-red-700 cursor-pointer;
     }
   }
 }

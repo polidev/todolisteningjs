@@ -13,7 +13,7 @@ export default function TodoItem({ todo, toggleTodo, deleteTodo }) {
         <label htmlFor={`taskCheckbox-${todo.id}`} id={`taskLabel-${todo.id}`}>
           {todo.text}
         </label>
-        <button onClick={() => deleteTodo(todo.id)}>Delete</button>
+        <button onClick={() => deleteTodo(todo.id)}>X</button>
       </div>
     </>
   );

@@ -1,6 +1,7 @@
 import ShopInput from "../components/shopInput/shopInput.jsx";
 import ShopItem from "../components/shopItem/shopItem.jsx";
 import useShopList from "../hooks/useShopList.jsx";
+import "./shoppingPage.css";
 
 export default function ShoppingPage() {
   const {
@@ -18,7 +19,7 @@ export default function ShoppingPage() {
   return (
     <>
       <ShopInput addShopTodo={addShopTodo} />
-      <section>
+      <section className="shop-list">
         {shopList.map((shopTodo) => (
           <ShopItem
             key={shopTodo.id}
@@ -32,7 +33,7 @@ export default function ShoppingPage() {
         ))}
       </section>
 
-      <section>
+      <section className="shop-stats">
         {total > 0 && (
           <p>
             {completed} of {total} items complete

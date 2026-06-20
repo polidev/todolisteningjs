@@ -1,4 +1,17 @@
 @import "tailwindcss";
 
 @layer components {
+  #todo-form {
+    @apply w-full mb-2 flex flex-col items-center gap-4 p-4 bg-white rounded-lg shadow-md;
+    @apply md:max-w-md;
+    @apply lg:max-w-lg;
+
+    & input {
+      @apply w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400;
+    }
+
+    & button {
+      @apply px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-300;
+    }
+  }
 }

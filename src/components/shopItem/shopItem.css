@@ -1,4 +1,26 @@
 @import "tailwindcss";
 
 @layer components {
+  .shop-item {
+    @apply flex flex-row items-center p-4 gap-4 bg-white rounded shadow mb-2;
+
+    & input[type="checkbox"] {
+      @apply size-4 cursor-pointer;
+
+      &:checked ~ label {
+        @apply line-through text-gray-400;
+      }
+    }
+    & button:last-of-type {
+      @apply hover:text-red-700 cursor-pointer;
+    }
+  }
+
+  .quantity-controls {
+    @apply ml-auto flex gap-2;
+
+    & button {
+      @apply hover:text-blue-700 cursor-pointer;
+    }
+  }
 }
