@@ -12,7 +12,7 @@ export default function ShopInput({ addShopTodo }) {
     addShopTodo(shopInput.value.trim(), shopQuantity.value.trim());
 
     shopInput.value = "";
-    shopQuantity.value = "";
+    shopQuantity.value = 1;
   };
 
   const handleKeyDown = (e) => {

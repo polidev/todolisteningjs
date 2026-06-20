@@ -22,11 +22,14 @@ export default function ShopItem({
           id={`shopLabel-${shopTodo.id}`}
         >
           {shopQuantity}
+          {" - "}
           {shopTodo.text}
         </label>
-        <button onClick={() => deleteShopTodo(shopTodo.id)}>Delete</button>
-        <button onClick={() => incrementQuantity(shopTodo.id)}>+</button>
-        <button onClick={() => decrementQuantity(shopTodo.id)}>-</button>
+        <span className="quantity-controls">
+          <button onClick={() => incrementQuantity(shopTodo.id)}>+</button>
+          <button onClick={() => decrementQuantity(shopTodo.id)}>-</button>
+        </span>
+        <button onClick={() => deleteShopTodo(shopTodo.id)}>X</button>
       </div>
     </>
   );
