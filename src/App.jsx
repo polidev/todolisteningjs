@@ -8,13 +8,18 @@ const MusicPlayer = lazy(
   () => import("./components/musicPlayer/musicPlayer.jsx"),
 );
 
+const Layout = lazy(() => import("./components/layout/layout.jsx"));
+
 function App() {
   return (
     <>
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          <Route path="/" element={<TodoPage />} />
-          <Route path="/shopping" element={<ShoppingPage />} />
+          <Route path="/" element={<Layout children={<TodoPage />} />} />
+          <Route
+            path="/shopping"
+            element={<Layout children={<ShoppingPage />} />}
+          />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
         {/* <MusicPlayer /> */}
