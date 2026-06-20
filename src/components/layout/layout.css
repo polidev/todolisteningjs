@@ -7,5 +7,13 @@
 
   .nav {
     @apply w-full flex flex-row items-center justify-center gap-4;
+
+    & a {
+      @apply text-xl text-gray-700 hover:text-blue-400 hover:underline transition duration-300;
+    }
+  }
+
+  .isActive {
+    @apply underline;
   }
 }
