@@ -1,4 +1,7 @@
 @import "tailwindcss";
 
 @layer components {
+  .shop-item {
+    @apply flex items-center justify-between p-4 bg-white rounded shadow mb-2;
+  }
 }

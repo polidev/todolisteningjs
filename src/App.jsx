@@ -30,7 +30,16 @@ function App() {
           />
           <Route
             path="/shopping"
-            element={<Layout children={<ShoppingPage />} />}
+            element={
+              <Layout
+                children={
+                  <>
+                    <ShoppingPage />
+                    <MusicPlayer />
+                  </>
+                }
+              />
+            }
           />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
